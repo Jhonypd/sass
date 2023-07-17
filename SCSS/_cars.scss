@@ -1,0 +1,19 @@
+.cars {
+    h2 {
+        color: $bg-color;
+    }
+    li {
+        color: $color-4;
+
+        a {
+            background-color: $color-1;
+        }
+        img{
+            cursor: pointer;
+            filter: blur(1px) grayscale(50%);
+        }
+        img:hover{
+            filter: blur(0) grayscale(0);
+        }
+    }
+}
