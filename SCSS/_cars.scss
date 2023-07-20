@@ -1,9 +1,27 @@
+@import 'blocks';
+@mixin theme($theme: $text-2, $bg: $color-hover) {
+    border: 1px solid $theme;
+    background-color: $color-hover;
+}
 .cars {
+    @extend %blocks;
+    background-color: $color-2;
     h2 {
-        color: $bg-color;
+        color: $text-2;
+        margin-left: 2rem;
+    }
+    .destaks{
+        @include theme;
     }
     li {
-        color: $color-4;
+        @include theme($theme: $link-color-1, $bg: $color-2);
+        color: $color-1;
+        display: flex;
+        float: left;
+        max-height: max-content;
+        justify-content: center;
+        align-items: baseline;
+        flex-flow: column;
 
         a {
             background-color: $color-1;
@@ -15,5 +33,8 @@
         img:hover{
             filter: blur(0) grayscale(0);
         }
+    }
+    .img-container:hover{
+        box-shadow: 6px 5px 15px rgba(255, 255, 255, 0.801);
     }
 }
