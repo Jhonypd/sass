@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 *{
     border: 0;
     margin: 0;
@@ -10,10 +12,12 @@ div,
 p{
     display: block;
 }
+article,
 header,
 section,
 footer{
     display: block;
+    float: left;
     margin: 0 auto;
     width: 100%;
     padding: 4rem 0;
@@ -23,7 +27,17 @@ section {
 }
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: math.div(1200, 1200) * 100%;
+
+    @media (max-width: 1199px) {
+        max-width: math.div(1000, 1200) * 100%;
+    }
+    &__logo{
+        font-size: $font-big;
+        margin: 0 2rem;
+        color: #fff;
+    }
+    
 }
 img{
     width: 100%;
@@ -60,11 +74,13 @@ h3 {
 }
 
 header{
-    background-color: #fff;
-    box-shadow: 0 0 16px rgba(0, 0, 0, .10);;
+    background-color: $color-hover;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .10);
 }
 footer {
     margin-top: $mt;
     padding: $mb 0;
     background-color: $bg-color-2;
 }
+
+

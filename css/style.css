@@ -13,10 +13,12 @@ p {
   display: block;
 }
 
+article,
 header,
 section,
 footer {
   display: block;
+  float: left;
   margin: 0 auto;
   width: 100%;
   padding: 4rem 0;
@@ -28,7 +30,17 @@ section {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 100%;
+}
+@media (max-width: 1199px) {
+  .container {
+    max-width: 83.3333333333%;
+  }
+}
+.container__logo {
+  font-size: 2.5rem;
+  margin: 0 2rem;
+  color: #fff;
 }
 
 img {
@@ -67,7 +79,7 @@ h3 {
 }
 
 header {
-  background-color: #fff;
+  background-color: #fe7c7f;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -77,41 +89,63 @@ footer {
   background-color: #E0E0E0;
 }
 
-.motorbike, .cars {
+.blocks {
   padding: 3rem 0;
 }
-.motorbike h2, .cars h2 {
+.blocks__title {
   color: #15616d;
 }
-.motorbike ul, .cars ul {
+.blocks__list {
   list-style-type: none;
   font-size: 1.4rem;
-  display: flex;
-  justify-content: space-between;
-  height: 250px;
+  display: block;
+  float: left;
+  height: auto;
+  margin: 1.5rem auto;
   padding: 1rem 0;
   width: 100%;
 }
-.motorbike li, .cars li {
+.blocks__item {
   color: #fe4c50;
   display: block;
-  margin: 1.5rem auto;
-  width: 30%;
+  margin: 1.5rem 0.75rem;
+  text-align: center;
+  width: calc(33% - 15px);
 }
-.motorbike li .img-container, .cars li .img-container {
-  display: block;
-  height: 200px;
+@media (max-width: 999px) {
+  .blocks__item {
+    width: calc(99% - 30px);
+  }
+}
+.blocks__img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
   overflow: hidden;
   width: 100%;
 }
-.motorbike li a, .cars li a {
+@media (max-width: 999px) {
+  .blocks__img-container {
+    height: 20rem;
+  }
+}
+.blocks__description {
+  color: #444;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+}
+.blocks__description--destack {
+  color: #15616d;
+}
+.blocks__button {
   background-color: #15616d;
   border-radius: 5px;
   color: white;
-  display: block;
+  display: inline-block;
   font-size: 2rem;
   margin: 2rem auto 2rem;
-  padding: 4px 8px;
+  padding: 0.5rem 3rem;
   text-align: center;
   text-decoration: none;
 }
@@ -119,17 +153,14 @@ footer {
 .cars {
   background-color: #fe4c50;
 }
-.cars h2 {
+.cars__title {
   color: #b5aec8;
   margin-left: 2rem;
 }
-.cars .destaks {
-  border: 1px solid #b5aec8;
-  background-color: #fe7c7f;
-}
-.cars li {
+.cars__item {
   border: 1px solid #51545f;
-  background-color: #fe7c7f;
+  background-color: #fe4c50;
+  box-shadow: 0 0 1px rgba(68, 68, 68, 0.25);
   color: #15616d;
   display: flex;
   float: left;
@@ -138,82 +169,80 @@ footer {
   align-items: baseline;
   flex-flow: column;
 }
-.cars li a {
-  background-color: #15616d;
+.cars__item--destacks {
+  border: 1px solid #1e1e27;
+  background-color: #fe7c7f;
+  box-shadow: 0 0 1px rgba(68, 68, 68, 0.25);
 }
-.cars li img {
+.cars__item img {
   cursor: pointer;
-  filter: blur(1px) grayscale(50%);
+  filter: brightness(110%);
 }
-.cars li img:hover {
-  filter: blur(0) grayscale(0);
+.cars__item img:hover {
+  width: 110%;
 }
-.cars .img-container:hover {
-  box-shadow: 6px 5px 15px rgba(255, 255, 255, 0.801);
+.cars__button {
+  background-color: #15616d;
 }
 
-.motorbike, .cars {
-  padding: 3rem 0;
+.motorbikes {
+  background-color: #fe4c50;
 }
-.motorbike h2, .cars h2 {
+.motorbikes__title {
+  color: #b5aec8;
+  margin-left: 2rem;
+}
+.motorbikes__item {
+  border: 1px solid #51545f;
+  background-color: #fe4c50;
+  box-shadow: 0 0 1px rgba(68, 68, 68, 0.25);
   color: #15616d;
-}
-.motorbike ul, .cars ul {
-  list-style-type: none;
-  font-size: 1.4rem;
   display: flex;
-  justify-content: space-between;
-  height: 250px;
-  padding: 1rem 0;
-  width: 100%;
+  float: left;
+  max-height: max-content;
+  justify-content: center;
+  align-items: baseline;
+  flex-flow: column;
 }
-.motorbike li, .cars li {
-  color: #fe4c50;
-  display: block;
-  margin: 1.5rem auto;
-  width: 30%;
+.motorbikes__item--destacks {
+  border: 1px solid #1e1e27;
+  background-color: #fe7c7f;
+  box-shadow: 0 0 1px rgba(68, 68, 68, 0.25);
 }
-.motorbike li .img-container, .cars li .img-container {
-  display: block;
-  height: 200px;
-  overflow: hidden;
-  width: 100%;
+.motorbikes__item img {
+  cursor: pointer;
+  filter: brightness(110%);
 }
-.motorbike li a, .cars li a {
+.motorbikes__item img:hover {
+  width: 110%;
+}
+.motorbikes__button {
   background-color: #15616d;
-  border-radius: 5px;
-  color: white;
-  display: block;
-  font-size: 2rem;
-  margin: 2rem auto 2rem;
-  padding: 4px 8px;
-  text-align: center;
-  text-decoration: none;
 }
 
 .destack {
   padding: 1.5rem;
 }
-.destack h1 {
+.destack__title {
   color: #b5aec8;
   float: left;
   font-size: 2.5rem;
   margin-top: 0;
 }
-.destack h2 {
+.destack__subtitle {
   color: #1e1e27;
   float: left;
   font-size: 1.4rem;
   margin-left: 1.5rem;
   margin-top: 1rem;
 }
-.destack img {
+.destack__image {
   width: 100%;
   height: auto;
   margin: 1.5rem auto;
   filter: drop-shadow(10px 15px 15px #1e1e27);
 }
-.destack p {
+.destack__description {
   font-size: 1.8rem;
   color: #1e1e27;
   padding: 2rem 0;

@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>J Car</title>
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h4>J Cars</h4>
+            <h4 class="container__logo">J Cars</h4>
         </div>
     </header>
     <section>
         <div class="destack">
             <div class="container">
-                <h1>Audi A5</h1>
-                <h2>Destaques</h2>
-                <img src="images/car-1.jpg" alt="Audi A5">
-                <p>Carro seminovo, 4 portas, completo com ar-condicionado, vidro e travas elelétricas.</p>
+                <h1 class="destack__title">Audi A5</h1>
+                <h2 class="destack__subtitle">Destaques</h2>
+                <img class="destack__image" src="images/car-1.jpg" alt="Audi A5">
+                <p class="destack__description">Carro seminovo, 4 portas, completo com ar-condicionado, vidro e travas elelétricas.</p>
             </div>
         </div>
-        <div class="container" id="cars">
-            <div class="blocks cars">
-                <h2>Ver carros</h2>
-                <ul>
-                    <li class="destaks">
-                        <div class="img-container">
-                            <img src="images/car-1-pain.jpg" alt="Painel Audi A5">
-                        </div>
-                        <a href="#01">Ver mais</a>
-                    </li>
-                    <li>
-                        <div class="img-container">
-                            <img src="images/car-1-fund.jpg" alt="Painel Audi A5">
-                        </div>
-                        <a href="#02">Ver mais</a>
-                    </li>
-                    <li>
-                        <div class="img-container">
-                            <img src="images/car-1-lan.jpg" alt="Painel Audi A5">
-                        </div>
-                        <a href="#03">Ver mais</a>
-                    </li>
-                </ul>
+        <section>
+
+            <div class="container">
+                <div class="blocks cars">
+                    <h2 class="blocks__title cars__title">Ver Carros</h2>
+                    <ul class="blocks__list cars__list">
+                        <li class="blocks__item cars__item cars__item--destacks">
+                            <div class="blocks__img-container cars__img-container">
+                                <img src="images/car-1-pain.jpg" alt="Painel Audi A5">
+                            </div>
+                            <p class="blocks__description blocks__description--destack">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique ea temporibus corporis quo. </p>
+                            <a class="blocks__button cars__button" href="#01">Ver mais</a>
+                        </li>
+                        <li class="blocks__item cars__item">
+                            <div class="blocks__img-container cars__img-container">
+                                <img src="images/car-1-fund.jpg" alt="Painel Audi A5">
+                            </div>
+                            <p class="blocks__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique ea temporibus corporis quo. </p>
+                            <a class="blocks__button cars__button" href="#02">Ver mais</a>
+                        </li>
+                        <li class="blocks__item cars__item">
+                            <div class="blocks__img-container cars__img-container">
+                                <img src="images/car-1-lan.jpg" alt="Painel Audi A5">
+                            </div>
+                            <p class="blocks__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique ea temporibus corporis quo. </p>
+                            <a class="blocks__button cars__button" href="#03">Ver mais</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="blocks motorbikes">
+                    <h2 class="blocks__title motorbikes__title">Ver Motos</h2>
+                    <ul class="blocks__list motorbikes__list">
+                        <li id="img-01" class="blocks__item motorbikes__item motorbikes__item--destacks">
+                            <div class="blocks__img-container motorbikes__img-container">
+                                <img src="images/Moto_1.jpg" alt="Painel Audi A5">
+                            </div>
+                            <p class="blocks__description blocks__description--destack">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique ea temporibus corporis quo. </p>
+                            <a class="blocks__button motorbikes__button" href="#01">Ver mais</a>
+                        </li>
+                        <li id="img-02" class="blocks__item motorbikes__item">
+                            <div class="blocks__img-container motorbikes__img-container">
+                                <img src="images/Moto_2.jpg" alt="Painel Audi A5">
+                            </div>
+                            <p class="blocks__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique ea temporibus corporis quo. </p>
+                            <a class="blocks__button motorbikes__button" href="#02">Ver mais</a>
+                        </li>
+                        <li id="img-03" class="blocks__item motorbikes__item">
+                            <div class="blocks__img-container motorbikes__img-container">
+                                <img src="images/Moto_3.jpg" alt="Painel Audi A5">
+                            </div>
+                            <p class="blocks__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique ea temporibus corporis quo. </p>
+                            <a class="blocks__button motorbikes__button" href="#03">Ver mais</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </section>
     <footer>
         <div class="container">
@@ -53,4 +91,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -42,3 +42,20 @@ São ferramentas utilizadas para aumentar a produtividade no desenvolvimento CSS
 - salvar alterações
 - comitar no seu repositório
 
+## BEM CSS
+
+- Block
+- Element
+- Modifier
+
+- Padrão do projeto / Desiners Paterns 
+
+- Exemplo: .cars__title
+``
+.cars__title
+.cars__list
+.cars__item
+.cars__button
+.cars__img-container
+
+``

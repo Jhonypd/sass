@@ -1,26 +1,26 @@
 .destack {
     // background-color: $bg-color-2;
     padding: $space-default;
-    h1 {
+    &__title {
         color: $text-2;
         float: left;
         font-size: $font-big;
         margin-top: 0;
     }
-    h2 {
+    &__subtitle {
         color: $text-1;
         float: left;
         font-size: $font-small;
         margin-left: $space-default;
         margin-top: $mt;
     }
-    img {
+    &__image {
         width: 100%;
         height: auto;
         margin: $space-default auto;
         filter: drop-shadow(10px 15px 15px $text-1);
     }
-    p {
+    &__description {
         font-size: $font-normal;
         color: $text-1;
         padding: 2rem 0;
